@@ -5,6 +5,7 @@ import Header from '../components/header/Header';
 import Banner from '../components/banner/Banner';
 import Search from '../components/search/Search';
 import Section from '../components/section/Section';
+import Trendings from '../components/trendings/Trendings';
 
 const statusBartHeight = Contants.statusBarHeight;
 
@@ -28,6 +29,8 @@ export default function Index() {
           size="text-2xl"
           action={() => console.log('Comidas em alta')}
         />
+
+        <Trendings />
       </View>
     </ScrollView>
   );
