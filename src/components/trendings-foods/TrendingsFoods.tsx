@@ -1,9 +1,9 @@
 import { View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
 import React, { useEffect, useState } from 'react';
-import FoodCard from './food-card/Food';
+import FoodCard from './food-card/FoodCard';
 import { Food } from '@/types/food';
 
-const Trendings = () => {
+const TrendingsFoods = () => {
   const [foods, setFoods] = useState<Food[]>([]);
 
   const fetchFoods = async () => {
@@ -27,4 +27,4 @@ const Trendings = () => {
   );
 };
 
-export default Trendings;
+export default TrendingsFoods;

@@ -5,7 +5,8 @@ import Header from '../components/header/Header';
 import Banner from '../components/banner/Banner';
 import Search from '../components/search/Search';
 import Section from '../components/section/Section';
-import Trendings from '../components/trendings/Trendings';
+import TrendingsFoods from '../components/trendings-foods/TrendingsFoods';
+import TrendingsRestaurants from '../components/trendings-restaurants/TrendingsRestaurants';
 
 const statusBartHeight = Contants.statusBarHeight;
 
@@ -29,8 +30,15 @@ export default function Index() {
           size="text-2xl"
           action={() => console.log('Comidas em alta')}
         />
+        <TrendingsFoods />
 
-        <Trendings />
+        <Section
+          name="Famosos no DevFood"
+          label="Veja Todos"
+          size="text-xl"
+          action={() => console.log('Famosos no DevFood')}
+        />
+        <TrendingsRestaurants />
       </View>
     </ScrollView>
   );
