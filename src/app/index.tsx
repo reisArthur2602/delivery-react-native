@@ -7,6 +7,7 @@ import Search from '../components/search/Search';
 import Section from '../components/section/Section';
 import TrendingsFoods from '../components/trendings-foods/TrendingsFoods';
 import TrendingsRestaurants from '../components/trendings-restaurants/TrendingsRestaurants';
+import RestaurantVertical from '../components/restaurant-vertical/RestaurantVertical';
 
 const statusBartHeight = Contants.statusBarHeight;
 
@@ -17,7 +18,7 @@ export default function Index() {
       className="bg-slate-200"
       showsVerticalScrollIndicator={false}
     >
-      <View className="w-full px-4" style={{ marginTop: statusBartHeight + 8 }}>
+      <View className="w-full p-4" style={{ marginTop: statusBartHeight + 8 }}>
         <Header />
 
         <Banner />
@@ -39,6 +40,16 @@ export default function Index() {
           action={() => console.log('Famosos no DevFood')}
         />
         <TrendingsRestaurants />
+
+
+        <Section
+          name="Restaurantes"
+          label="Veja Todos"
+          size="text-xl"
+          action={() => console.log('Famosos no DevFood')}
+        />
+        <RestaurantVertical />
+
       </View>
     </ScrollView>
   );

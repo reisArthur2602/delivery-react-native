@@ -1,9 +1,10 @@
-import { View, Text, FlatList } from 'react-native';
+import { View, Text } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { Restaurants } from '@/types/restaurants';
-import RestaurantCard from './restaurant-card/RestaurantCard';
+import { FlatList } from 'react-native-gesture-handler';
+import RestaurantItem from './restaurant-item/RestaurantItem';
 
-const TrendingsRestaurants = () => {
+const RestaurantVertical = () => {
   const [restaurants, setRestaurants] = useState<Restaurants[]>([]);
 
   const fetchRestaurants = async () => {
@@ -17,14 +18,10 @@ const TrendingsRestaurants = () => {
   }, []);
 
   return (
-    <FlatList
-      data={restaurants}
-      renderItem={({ item }) => <RestaurantCard {...item} key={item.id} />}
-      horizontal
-      contentContainerStyle={{ gap: 14}}
-      showsHorizontalScrollIndicator={false}
-    />
+    <View className='flex gap-4 w-full'>
+      {restaurants.map(restaurant => (<RestaurantItem {...restaurant}/>))}
+    </View>
   );
 };
 
-export default TrendingsRestaurants;
+export default RestaurantVertical;

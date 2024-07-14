@@ -21,7 +21,7 @@ const TrendingsFoods = () => {
       data={foods}
       renderItem={({ item }) => <FoodCard {...item} key={item.id} />}
       horizontal
-      contentContainerStyle={{ gap: 14, paddingHorizontal: 16 }}
+      contentContainerStyle={{ gap: 14}}
       showsHorizontalScrollIndicator={false}
     />
   );
