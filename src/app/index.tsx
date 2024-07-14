@@ -4,6 +4,7 @@ import Contants from 'expo-constants';
 import Header from '../components/header/Header';
 import Banner from '../components/banner/Banner';
 import Search from '../components/search/Search';
+import Section from '../components/section/Section';
 
 const statusBartHeight = Contants.statusBarHeight;
 
@@ -16,8 +17,17 @@ export default function Index() {
     >
       <View className="w-full px-4" style={{ marginTop: statusBartHeight + 8 }}>
         <Header />
+
         <Banner />
+
         <Search />
+
+        <Section
+          name="Comidas em alta"
+          label="Veja Mais"
+          size="text-2xl"
+          action={() => console.log('Comidas em alta')}
+        />
       </View>
     </ScrollView>
   );
